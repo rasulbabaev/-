@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x, y, z;
+  cout << "Введите размер массива: " << endl;
+  cin >> x >> y;
+  cout << "Введите столбцы второго массива:" << endl;
+  cin >> z;
+  int a[x][y], b[x][y], c[x][y];
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < y; j++) {
+      cin >> a[i][j];
+    }
+  }
+  cout << endl;
+  for (int i = 0; i < y; i++) {
+    for (int j = 0; j < z; j++) {
+      cin >> b[i][j];
+    }
+  }
+  cout << endl;
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < z; j++) {
+      c[i][j] = 0;
+    }
+  }
+
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < z; j++) {
+      for (int r = 0; r < y; r++) {
+        c[i][j] = c[i][j] + a[i][r] * b[r][j];
+      }
+      cout << c[i][j] << " ";
+    }
+    cout << endl;
+  }
+}
