@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x, y;
+  cout << "Ââåäèòå ðàçìåð ìàññèâà: " << endl;
+  cin >> x >> y;
+  cout << endl;
+  int a[x][y], b[x][y], c[x][y];
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < y; j++) {
+      cin >> a[i][j];
+    }
+  }
+  cout << endl;
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < y; j++) {
+      cin >> b[i][j];
+    }
+  }
+  cout << endl;
+  for (int i = 0; i < x; i++) {
+    for (int j = 0; j < y; j++) {
+      c[i][j] = a[i][j] + b[i][j];
+      cout << c[i][j] << " ";
+    }
+    cout << endl;
+  }
+}
